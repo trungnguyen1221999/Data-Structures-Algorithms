@@ -24,3 +24,8 @@ const input = [
      { name: "Mark",  age: 28, place: "Tampere" }
  ];
 console.log(SortAge(input))
+
+
+
+const SortByAge = (arr) => arr.map((item) => item.age).sort((a, b)=> a-b)
+console.log(SortByAge(input))
