@@ -7,7 +7,7 @@
 
 const ConverStr = (str) =>{
     if (str.length === 0) return undefined
-    let strArr = str.replaceAll("_", " ").trim().split(" ")
+    let strArr = str.trim().split("_")
     let resultArr = []
 
     for (let item of strArr) {
