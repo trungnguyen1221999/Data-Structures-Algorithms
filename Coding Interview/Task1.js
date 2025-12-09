@@ -3,15 +3,16 @@
 //Count: 10
 // Output: [4, 6, 7, 8, 9, 10]
 
-const findMissingNumbers = (arr, count) => {
-    let missingNumbers = [];
-    for(let i = 1; i <= count; i++) {
-        if(!arr.includes(i)) {
-            missingNumbers.push(i);
-        }
+const FindTheMissingNumber = (arr, count)=>{
+    if(count < 0 || isNaN(count)) return undefined
+
+    let missingArr = []
+    for (let i = 1; i <= count; i++)
+    {
+        if(!arr.includes(i)) missingArr.push(i)
     }
-    console.log(missingNumbers)
-    
+    return missingArr
 }
 
-findMissingNumbers([1, 2, 3, 5], 10);
+
+console.log(FindTheMissingNumber([1,2,3,5], 10))
