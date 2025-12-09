@@ -11,12 +11,18 @@
 
 const CountMap = (arr) =>{
     arr = arr.sort((a,b)=> a-b)
-    let countMap = new Map()
+    // let countMap = new Map()
+    // for (const item of arr)
+    // {
+    //    countMap.set(item, (countMap.get(item)||0) +1)
+    // }
+    // return countMap
+    let result = {}
     for (const item of arr)
     {
-       countMap.set(item, (countMap.get(item)||0) +1)
+        result[item] = result[item] ? result[item]+1 : 1 
     }
-    return countMap
+    return result
 }
 
 
